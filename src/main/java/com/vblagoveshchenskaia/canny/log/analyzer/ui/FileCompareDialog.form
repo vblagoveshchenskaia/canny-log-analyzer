@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.vblagoveshchenskaia.canny.log.analyzer.ui.FileCompareDialog">
+  <grid id="cbd77" binding="contentPane" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="48" y="54" width="436" height="297"/>
+    </constraints>
+    <properties>
+      <preferredSize width="640" height="480"/>
+    </properties>
+    <border type="empty">
+      <size top="1" left="1" bottom="1" right="1"/>
+      <color color="-16777216"/>
+    </border>
+    <children>
+      <grid id="94766" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="e7465" class="javax.swing.JButton" binding="buttonOK">
+            <constraints/>
+            <properties>
+              <text value="OK"/>
+            </properties>
+          </component>
+          <component id="5723f" class="javax.swing.JButton" binding="buttonCancel">
+            <constraints/>
+            <properties>
+              <text value="Cancel"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="178e9" class="javax.swing.JList" binding="fileNameList">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <selectionMode value="0"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

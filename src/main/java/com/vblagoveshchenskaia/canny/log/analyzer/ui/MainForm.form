@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.vblagoveshchenskaia.canny.log.analyzer.ui.MainForm">
+  <grid id="27dc6" binding="contentPane" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="800" height="600"/>
+    </constraints>
+    <properties>
+      <minimumSize width="199" height="97"/>
+      <preferredSize width="1024" height="768"/>
+    </properties>
+    <border type="empty">
+      <size top="1" left="1" bottom="1" right="1"/>
+    </border>
+    <children>
+      <grid id="b4f0" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="405dc" class="javax.swing.JButton" binding="analyzeButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Analyze"/>
+            </properties>
+          </component>
+          <component id="ed1cc" class="javax.swing.JButton" binding="saveButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <enabled value="false"/>
+              <text value="Save"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="26e07" binding="scrollPane">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="4693c" class="javax.swing.JTextArea" binding="textArea" default-binding="true">
+            <constraints/>
+            <properties>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <font size="14"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>
