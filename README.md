@@ -1,15 +1,20 @@
 # Canny log analyzer
 
-[englsh - click here](#eng)
+[Englsh - click here](#eng)
 
 ## Rus
 
-Canny log analyzer - это приложение для анализа и сравнения логов CAN шины, сохраненных с помощью Canny Can (Lin)
-Monitor.
+Canny log analyzer - это приложение для анализа и сравнения логов CAN шины, сохраненных с помощью приложения Canny CAN(
+LIN) Monitor - сниффера, поставляемого с CannyLab - средой разработки для контроллеров
+Canny (https://canny.ru, https://cannylogic.com). Приложение проверено на логах, сохраненных из Canny CAN(LIN) Monitor
+версии 2.4.
 
 Для каждого лога приложение находит отдельные биты, которые не менялись на его протяжении, а при сравнении логов -
-выбирает из них те, которые в разных логах имеют разные значения и генерирует отчет. Таким образом, если есть два, или
-более логов, снятых в разных состояниях системы, можно найти биты, передающие это состояние.
+выбирает из них те, которые в разных логах имеют разные значения и генерирует отчет, оставляя только их.
+Таким образом, если есть два, или
+более логов, снятых в разных состояниях (режимах работы) системы, можно найти биты, передающие это состояние.
+
+Также можно проанализировать только один лог.
 
 ### Пример отчета
 
@@ -33,7 +38,7 @@ Comparing 1.txt
            2.txt	________	____0101	01010101	01010101	01010000	00000_00	00000000	00000000
 ```
 
-В таблицах в первом столбце указан идентификатор кадра, или, имя лога, в остальных - содержимое кадра.
+В таблицах в первом столбце указан идентификатор кадра, или имя лога, в остальных - содержимое кадра.
 
 В данном примере мы сравниваем файл 1.txt с 0.txt и 2.txt и видим, например, что:
 
@@ -42,7 +47,7 @@ Comparing 1.txt
 
 ### Использование
 
-Сначала нужно снять и сохранить логи с помощю Canny Can (Lin) Monitor так, чтобы интересующее состояние (режим,
+Сначала нужно снять и сохранить логи с помощю Canny CAN(LIN) Monitor так, чтобы интересующее состояние (режим,
 положение переключателя, ...) было одинкаковым на протяжении каждого отдельного лога, но разным в разных логах.
 
 1. Скачайте последнюю версию приложения - файл canny-log-analyzer-{latest}.zip из раздела Releases ->
@@ -56,17 +61,23 @@ Comparing 1.txt
 
 ## Eng
 
-Canny log analyzer is an application for analysis and comparison of CAN-bus logs, retrieved and saved with Canny Can (
-Lin) Monitor.
+Canny log analyzer is an application for performing analysis and comparison of CAN bus logs, retrieved and saved with
+Canny CAN(LIN) Monitor - a sniffer distributed with CannyLab - an IDE for Canny
+controllers (https://canny.ru, https://cannylogic.com). The application was tested with logs saved from Canny CAN(LIN)
+Monitor version 2.4.
 
-For each log the application finds individual bits, which remained unchanged during the log recording, and while
-comparing multiple logs - selects from them the ones, which have distinct values in different logs and generates a
-report. So, if you have one or more logs, recorded in different system states, you can find the bits, which represent
+For each of the logs the application finds individual bits, which remained unchanged during the log recording, and while
+comparing multiple logs - selects from them the ones, which have different values in different logs and generates a
+report, leaving only them. So, if you have one or more logs, recorded in different system states (operation modes), you
+can find the bits, which represent
 this state.
+
+You can also analyze a single log.
 
 ### Report example
 
-[report example](#пример-отчета)
+[Report example](#пример-отчета)
+
 In the tables, the frame id or log name is in the first column, and the frame content - in the others.
 
 In this example we have compared file 1.txt against 0.txt and 2.txt, and we can see, that:
@@ -76,12 +87,16 @@ In this example we have compared file 1.txt against 0.txt and 2.txt, and we can 
 
 ### Usage
 
+At first, you need to record and save the logs with Canny CAN(LIN) Monitor, so that the state (mode, switch
+position, ...) you are interested in, will remain unchanged during any single log recording, but different in different
+logs.
+
 1. Download the last version - canny-log-analyzer-{latest}.zip from Releases ->
    {latest} (https://github.com/vblagoveshchenskaia/canny-log-analyzer/releases/latest) -> Assets and unpack to any
    convenient location;
 2. Run the exe file. In order to work, this application needs Java Runtime Environment 17 or later, if it is not
    installed, you will be redirected to a download page;
-3. Press Analyze and select file or files for comparison;
+3. Press Analyze and select the log file, or files for comparison;
 4. If you have selected more, then one file - choose the one to compare with others
 5. The report will be dispayed. You can save it by pressing the Save button.
 
